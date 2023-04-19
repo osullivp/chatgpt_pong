@@ -79,24 +79,24 @@
                 if (paddle1.y > 0) {
                     paddle1.y -= 10;
                 }
-                paddle1.state = PADDLE_STOPPED;
+                //paddle1.state = PADDLE_STOPPED;
             } else if (paddle1.state == PADDLE_DOWN) {
                 if (paddle1.y + paddle1.height < canvas.height) {
                     paddle1.y += 10;
                 }
-                paddle1.state = PADDLE_STOPPED;
+                //paddle1.state = PADDLE_STOPPED;
             }
 
             if (paddle2.state == PADDLE_UP) {
                 if (paddle2.y > 0) {
                     paddle2.y -= 10;
                 }
-                paddle2.state = PADDLE_STOPPED;
+                //paddle2.state = PADDLE_STOPPED;
             } else if (paddle2.state == PADDLE_DOWN) {
                 if (paddle2.y + paddle2.height < canvas.height) {
                     paddle2.y += 10;
                 }
-                paddle2.state = PADDLE_STOPPED;
+                //paddle2.state = PADDLE_STOPPED;
             }
 
             // Check for collisions with screen edges
@@ -148,7 +148,7 @@
             // Draw the FPS
             ctx.fillStyle = "green";
             ctx.font = "bold 20px Arial";
-            ctx.fillText("FPS: ".concat(Math.round(fps)), 275, 20);
+            ctx.fillText("FPS: ".concat(Math.round(fps)), 270, 20);
 
             // Request a redraw
             requestAnimationFrame(loop);
@@ -157,21 +157,33 @@
         // Add event listeners for key presses
         document.addEventListener("keydown", function (event) {
             // Handle key press for paddle1
-            if (paddle1.state == PADDLE_STOPPED) {
+            //if (paddle1.state == PADDLE_STOPPED) {
                 if (event.code == "KeyW") {
                     paddle1.state = PADDLE_UP;
                 } else if (event.code == "KeyS") {
                     paddle1.state = PADDLE_DOWN;
                 }
-            }
+            //}
 
             // Handle key press for paddle2
-            if (paddle2.state == PADDLE_STOPPED) {
+            //if (paddle2.state == PADDLE_STOPPED) {
                 if (event.code == "ArrowUp") {
                     paddle2.state = PADDLE_UP;
                 } else if (event.code == "ArrowDown") {
                     paddle2.state = PADDLE_DOWN;
                 }
+            //}
+        });
+
+        document.addEventListener("keyup", function (event) {
+            // Handle key release for paddle1
+            if (event.code == "KeyW" || event.code == "KeyS") {
+                paddle1.state = PADDLE_STOPPED;
+            }
+
+            // Handle key release for paddle2
+            if (event.code == "ArrowUp" || event.code == "ArrowDown") {
+                paddle2.state = PADDLE_STOPPED;
             }
         });
 
