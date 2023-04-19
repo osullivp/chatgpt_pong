@@ -64,9 +64,17 @@
         function loop(timestamp) {
 
             // Calculate elapsed time since last frame
-            const elapsedTime = timestamp - lastTime;
-            lastTime = timestamp;
-
+            var elapsedTime = timestamp - lastTime;
+            
+            // Limit the frame rate to 60 fps
+            if (elapsedTime < 17) {
+                lastTime = timestamp + (17 - elapsedTime);
+                sleep(16 - elapsedTime);
+                elapsedTime = 17;
+            } else {
+                lastTime = timestamp;
+            }
+           
             // Calculate frames per second
             fps = 1000 / elapsedTime;
 
@@ -189,6 +197,14 @@
 
         // Start the game
         var frame = requestAnimationFrame(loop);
+
+        function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+                currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+        }
 
     </script>
 </body>
