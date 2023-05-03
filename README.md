@@ -5,7 +5,7 @@ The aim of this project is to create an HTML/Javascript version of Atari's Pong 
 
 Key findings:
 
-- ChatGPT generated the entire code for an initial simple version of Pong with a single prompt. However this implementation needed amendments as for instance the collision detection routine was quite naive and failed to handle some edge cases.
+- ChatGPT generated the entire code for an initial simple version of Pong with a single prompt. However this implementation needed amendments as for instance the collision detection routine was quite naive and failed to handle a number of edge cases.
 
 - Also, without quite a deep knowledge of collision detection it was hard to eliminate all of the bugs. For instance, a user would need to know about 'Axis Aligned Bounding Boxes' and also to be able to properly describe the issues encountered.
 
