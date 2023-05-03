@@ -5,7 +5,7 @@ The aim of this project is to create an HTML/Javascript version of Atari's Pong 
 
 The prompt used was as follows:
 
-> "Give me the code for an HTML5/javascript version of the Atari videogame 'Pong'. The game should include a bouncing ball and two vertically oriented 'paddles' which are positioned on the left and right sides of the screen."
+> Give me the code for an HTML5/javascript version of the Atari videogame 'Pong'. The game should include a bouncing ball and two vertically oriented 'paddles' which are positioned on the left and right sides of the screen.
 
 Key findings:
 
