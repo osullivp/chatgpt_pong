@@ -1,7 +1,7 @@
 # chatgpt_pong
 A version of Pong created using ChatGPT
 
-The aim of this project is to create an HTML/Javascript version of Atari's Pong using just ChatGPT (as far as possible).
+The aim of this project is to create an HTML/Javascript version of Atari's Pong using just ChatGPT (as far as possible). ChatGPT 3.5 was used which is the free version available via https://chat.openai.com/ at the time of writing (early May 2023).
 
 Key findings:
 
