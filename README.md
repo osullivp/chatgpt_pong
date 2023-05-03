@@ -3,6 +3,10 @@ A version of Pong created using ChatGPT
 
 The aim of this project is to create an HTML/Javascript version of Atari's Pong using just ChatGPT (as far as possible). ChatGPT 3.5 was used which is the free version available via https://chat.openai.com/ at the time of writing (early May 2023).
 
+The prompt used was as follows:
+
+> "Give me the code for an HTML5/javascript version of the Atari videogame 'Pong'. The game should include a bouncing ball and two vertically oriented 'paddles' which are positioned on the left and right sides of the screen."
+
 Key findings:
 
 - ChatGPT generated the entire code for an initial simple version of Pong with a single prompt. However this implementation needed amendments as for instance the collision detection routine was quite naive and failed to handle a number of edge cases.
